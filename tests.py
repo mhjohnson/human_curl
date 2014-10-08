@@ -345,7 +345,7 @@ class RequestsTestCase(BaseTestCase):
         self.assertTrue(random_value1 in json_response['args'][random_key])
         self.assertTrue(random_value2 in json_response['args'][random_key])
 
-    def test_redirect(self):
+   def test_redirect(self):
         r = requests.get(build_url("redirect", '3'), allow_redirects=True)
         self.assertEquals(r.status_code, 200)
         self.assertEquals(len(r.history), 3)
